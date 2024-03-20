@@ -1,4 +1,3 @@
-// En pseint
 Algoritmo teorema_euler
 	cantCaras <- 15
 	cantAristas <- 14
@@ -8,13 +7,3 @@ Algoritmo teorema_euler
 	Escribir es_poliedroConvexo
 	
 FinAlgoritmo 
-
-//En C
-#include <stdio.h>
-
-int main(){
-	
-	d
-	
-	return 0;
-}
