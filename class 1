@@ -1,0 +1,20 @@
+// En pseint
+Algoritmo teorema_euler
+	cantCaras <- 15
+	cantAristas <- 14
+	cantVertices <- 1
+	es_poliedroConvexo <- cantCaras - cantAristas + cantVertices = 2
+	
+	Escribir es_poliedroConvexo
+	
+FinAlgoritmo 
+
+//En C
+#include <stdio.h>
+
+int main(){
+	
+	
+	
+	return 0;
+}
