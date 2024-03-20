@@ -7,3 +7,12 @@ Algoritmo teorema_euler
 	Escribir es_poliedroConvexo
 	
 FinAlgoritmo 
+
+Algoritmo Color_azul
+	
+	longitud_de_onda <- 462
+	es_azul<- longitud_de_onda <=482 y longitud_de_onda >=460
+	
+	escribir  es_azul
+	
+FinAlgoritmo
