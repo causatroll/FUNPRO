@@ -13,3 +13,22 @@ Algoritmo multiplo_numero
 	FinSi
 	
 FinAlgoritmo
+
+
+
+Algoritmo funcion_tramos
+	
+	Escribir "Ingrese el valor de x: "
+	Leer x
+	
+	Si (x < 5) Entonces
+		fx<- x*x
+	SiNo
+		si ( 5>=x y x<=10) Entonces
+			fx<- x*x*x -1
+		SiNo
+			fx<-x/2
+		FinSi
+	FinSi
+	Escribir " El Fx es:", fx
+FinAlgoritmo
