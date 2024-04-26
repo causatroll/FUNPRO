@@ -36,3 +36,52 @@ int main (){
 	
 	return 0;
 }
+
+
+
+
+
+/*Calculo del valor de PI*/
+
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592
+
+int main(){
+	int cantTerm,i;
+	double produ,productoria,valorPi,dif;
+
+	printf("Ingrese la cantidad de terminos \n");
+	scanf("%d", &cantTerm);
+	
+	if(cantTerm>0){
+		
+		i=1;
+		produ=1;
+		
+		while (i<=cantTerm){
+		productoria= pow(4*i,2)/((4*i-1)*(4*i+1));
+		produ = produ*productoria;
+		i++;
+		}
+		
+		valorPi= produ*2*sqrt(2);
+		printf("El valor calculado de PI a traves de la productoria para %d terminos es: %lf \n", cantTerm, valorPi);
+
+		dif = fabs (valorPi - PI );
+		
+		if(dif >=0.005){
+			printf("El error calculado si es considerable (>=0.005): %lf ", dif);
+		}
+		else{
+			printf("El error calculado no es considerable (<0.005): %lf ", dif);
+		}
+		
+	}
+	else{
+		printf("La cantidad de terminos debe ser mayor que cero \n");
+	}
+	
+    return 0;
+}
+
