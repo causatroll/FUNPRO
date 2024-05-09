@@ -152,3 +152,76 @@ double calcularLogaritmo(double x, int n){
 	
 	return sumTotal;
 }
+
+// Base Numero
+#include <stdio.h>
+#include <math.h>
+
+int VerCifraNum(int numero,int numCifras);
+void operandoCifras(int numero, int numCifras,int *mayorCifra,int *sumCifra);
+
+int main (){
+	
+	int numero,numCifras,ok,mayorCifra,sumCifras,base,cantBase;
+
+	printf("Ingrese el numero: ");
+	scanf("%d", &numero);
+	printf("Ingrese la cantidad de cifras del numero indicado: ");
+	scanf("%d",&numCifras);
+	
+	if (numCifras<3	|| numCifras>6){
+		printf("La cantidad de cifras ingresadas no es correcta");
+		
+	}
+	
+	ok = VerCifraNum(numero,numCifras);
+	
+	if(ok){
+		operandoCifras(numero,numCifras,&mayorCifra,&sumCifras);
+		printf("La suma de cifras del numero %d y la cifra mayor es %d\n",sumCifras, mayorCifra);
+		
+		base= mayorCifra + 1;
+		cantBase=0;
+		while ( base >1 && base<11){
+			if(sumCifras%(base-1)==0){
+				printf("La base %d es una base que cumple la propiedad. porq la suma de cifras del numero es divisible por %d\n",base,base-1 );
+				cantBase++;
+			}
+			base++;
+		}
+		if(cantBase==0){
+			printf("No se encontro bases que cumplan con la propiedad");
+		}
+		else{
+			printf("La cantidad de bases encopntradas fue: %d",cantBase);
+		}
+		
+	}
+	else{
+		printf("La cantidad de cifras ingresadas no concuerda con el numero de cifras del numero\n");
+	}
+
+    return 0;
+}
+
+int VerCifraNum(int numero,int numCifras){
+	return ((int)log10(numero)+1)== numCifras;
+}
+	
+void operandoCifras(int numero, int numCifras,int *mayorCifra,int *sumCifras){
+	int i,cifra;
+	*mayorCifra=0;
+	*sumCifras=0;
+	i=0;
+	
+	while(i<numCifras){
+		cifra=numero%10;
+		numero=numero/10;
+		
+		*sumCifras=*sumCifras + cifra;
+		if(cifra>*mayorCifra){
+			*mayorCifra=cifra;
+		}
+		i++;
+	}
+}
