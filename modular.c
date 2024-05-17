@@ -4,7 +4,8 @@
 /*Prototipos*/
 int validarDatos(double lado1, double lado2, double lado3);
 void calcularSemiperimetroyArea(double lado1,double lado2, double lado3, double *semiperimetro, double *area );
-void imprimirResultados(double semiperimetro, double area);
+void imprimirResultados(double semiperimetro, double areadd);
+hola mundod
 
 int main (){
 
